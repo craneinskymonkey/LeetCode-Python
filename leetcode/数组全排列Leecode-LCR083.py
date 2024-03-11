@@ -4,7 +4,7 @@
 # @Author: houhaiyang
 # @Project: LeetCode-Python
 # @File：数组全排列Leecode-LCR083.py
-# @Description: 给定一个不含重复数字的整数数组 nums ，返回其 所有可能的全排列 。可以 按任意顺序 返回答案。
+# @Description: 给定一个不含重复数字的整数数组 nums ，返回其 所有可能的全排列 。可以 按任意顺序 返回答案。 考点：回溯法
 # company :  鉴智机器人
 
 class Solution:

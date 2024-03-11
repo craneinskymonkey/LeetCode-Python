@@ -73,5 +73,9 @@ class Solution:
 
 if __name__ == '__main__':
     matrix = [[0, 0, 0], [0, 1, 0], [1, 1, 1]]
-    ret = shortest_path(matrix)
+    # ret = shortest_path(matrix)
+    # print(ret)
+
+    S = Solution()
+    ret = S.updateMatrix(matrix)
     print(ret)
