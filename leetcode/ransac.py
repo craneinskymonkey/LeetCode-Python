@@ -4,7 +4,7 @@
 # @Author: houhaiyang
 # @Project: LeetCode-Python
 # @File：ransac.py
-# @Description:
+# @Description: 随机采样一致性算法
 # @company：
 
 
