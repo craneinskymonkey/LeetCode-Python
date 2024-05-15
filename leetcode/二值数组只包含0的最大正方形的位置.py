@@ -5,6 +5,7 @@
 # @Project: LeetCode-Python
 # @File：二值数组只包含0的最大正方形的位置.py
 # @Description: 给定二维数组只包含0和1，求只包含0的最大正方形的位置
+#               考察点：动态规划
 # @company：地平线二面
 
 def maximalSquare(matrix):
