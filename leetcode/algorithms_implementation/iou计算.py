@@ -4,7 +4,7 @@
 # @Author: houhaiyang
 # @Project: LeetCode-Python
 # @File：iou计算.py
-# @Description:
+# @Description: 计算两个bbox的iou
 # @company：地平线一面
 def bbox_iou(box1, box2):
     x1 = max(box1[0], box2[0])

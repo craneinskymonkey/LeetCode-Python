@@ -27,6 +27,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    nums = [0, 3, 7, 2, 5, 8,  6, 0, 1]
+    nums = [0, 3, 7, 2, 5, 8, 6, 0, 1]
     S = Solution()
     print(S.longestConsecutive(nums))

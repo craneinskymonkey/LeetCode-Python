@@ -4,24 +4,39 @@
 # @Author: houhaiyang
 # @Project: LeetCode-Python
 # @File：二叉树遍历.py
-# @Description:
+# @Description: 先序遍历二叉树
 # @company：爱芯智元面试题
 
 
-def inorder_traversal(node):
-    # 执行前序遍历（根左右）并打印节点值
-    if node is not None:
-        print(node.val, end=' ')
-        inorder_traversal(node.left)
-        inorder_traversal(node.right)
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
-def build_tree(input_tree):
-    return root
+def preorderTraversal(root):
+    result = []
+    
+    def traverse(node):
+        if not node:
+            return
+        result.append(node.val)  # 访问根节点
+        traverse(node.left)      # 递归遍历左子树
+        traverse(node.right)     # 递归遍历右子树
+    
+    traverse(root)
+    return result
+
 
 if __name__ == '__main__':
-    input_tree = [-10, 9, 20, None, None, 15, 7]
-    root = build_tree(input_tree)
-    inorder_traversal(root)
+    root = TreeNode(-10)
+    root.left = TreeNode(9)
+    root.right = TreeNode(20)
+    root.right.left = TreeNode(15)
+    root.right.right = TreeNode(7)
+
+    ret = preorderTraversal(root)
+    print(ret)
 
 
 

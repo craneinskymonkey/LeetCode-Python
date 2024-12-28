@@ -6,7 +6,7 @@
 # @File：二叉树中的最大路径和Leecode-124.py
 # @Description: 二叉树中的 路径 被定义为一条节点序列，序列中每对相邻节点之间都存在一条边。同一个节点在一条路径序列中 至多出现一次 。该路径 至少包含一个 节点，且不一定经过根节点。
 #               路径和 是路径中各节点值的总和。
-#               给你一个二叉树的根节点 root ，返回其 最大路径和 。
+#               给你一个二叉树的根节点 root ，返回其 最大路径和。
 # @company: 杭州罗博网络
 
 
@@ -67,18 +67,31 @@ def build_tree(input_tree):
         index += 1  # 移动到下一个值
     return root  # 返回根节点
 
-def inorder_traversal(node):
+def preorder_traversal(node):
     # 执行前序遍历（根左右）并打印节点值
     if node is not None:
         print(node.val, end=' ')
-        inorder_traversal(node.left)
-        inorder_traversal(node.right)
+        preorder_traversal(node.left)
+        preorder_traversal(node.right)
+    print('---')  # 添加分隔符以帮助调试
+
 
 if __name__ == '__main__':
 
+
+    # 构建二叉树
+    # root = TreeNode(-10)
+    # root.left = TreeNode(9)
+    # root.right = TreeNode(20)
+    # root.right.left = TreeNode(15)
+    # root.right.right = TreeNode(7)
+    # preorder_traversal(root)
+
+
+
     input_tree = [-10, 9, 20, None, None, 15, 7]
     root = build_tree(input_tree)
-    inorder_traversal(root)
+    
 
     S = Solution()
     sum = S.maxPathSum(root)
